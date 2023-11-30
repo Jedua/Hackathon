@@ -1,0 +1,65 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos de la sección de introducción */
+.intro {
+    text-align: center;
+    padding: 50px;
+}
+
+.intro h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos del slider */
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten a diferentes tamaños de pantalla */
+}
+
+.slider img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/* Media queries para dispositivos móviles y tabletas */
+@media screen and (max-width: 767px) {
+    .intro h1 {
+        font-size: 20px;
+    }
+
+    .slider img {
+        height: 150px;
+    }
+}
+
+/* Media queries para laptops */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .intro h1 {
+        font-size: 22px;
+    }
+
+    .slider img {
+        height: 200px;
+    }
+}
+
+/* Media queries para pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+    .intro h1 {
+        font-size: 24px;
+    }
+
+    .slider img {
+        height: 250px;
+    }
+}

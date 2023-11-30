@@ -1,0 +1,150 @@
+/* Estilos del encabezado y menú de navegación */
+header {
+    background-color: #39a2e7;
+    color: #fff;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* Media queries para dispositivos móviles y tabletas */
+@media screen and (max-width: 767px) {
+
+    /* Estilos del encabezado y menú de navegación */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+    }
+
+    /* nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    } */
+
+    .logo h1 {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    /* .menu {
+        list-style: none;
+        display: none;
+    } */
+
+    /* Estilos del menú */
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Estilos del texto del menú */
+    #menu-text {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .menu li {
+        margin-left: 10px;
+    }
+
+    .menu li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menu-toggle:checked~.menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Media queries para laptops */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* .logo h1 {
+        font-size: 22px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    } */
+}
+
+/* Media queries para pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+    .logo h1 {
+        font-size: 25px;
+    }
+}
