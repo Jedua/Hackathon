@@ -1,0 +1,75 @@
+
+https://z56kf071-3000.usw3.devtunnels.ms/
+
+tengo estructura de mi proyecto MVC generé el archivo registro.php y quiero los datos de mi formulario se inserten en la BD
+- proyecto_salud
+  - app
+    - controllers
+      - HomeController.php
+    - models
+      - UserModel.php
+    - views
+      - footer.php
+      - home.php
+      - login.php
+      - nav_login.php
+      - nav_logout.php
+      - registro.php
+      - login.php
+      - templete.php
+  - public
+    - css
+      - style.css
+    - js
+      - script.js
+    - images
+      - logo.png
+  - config
+    - config.php
+  - core
+    - Router.php
+    - Database.php
+  - index.php
+
+
+php -S localhost:8000
+
+para ubuntu
+
+php -S localhost:8000
+
+12:12:10 servicio@Servicio-Lap Downloads → chmod +x ./xampp-linux-x64-8.1.17-0-installer.run
+12:13:09 servicio@Servicio-Lap Downloads → sudo ./xampp-linux-x64-8.1.17-0-installer.run
+
+
+Para pausar o detener los servicios XAMPP dirigete a terminal y escriba el siguiente comando:
+
+sudo /opt/lampp/lampp stop
+
+Para iniciar los servicios, escriba lo siguiente:
+
+sudo /opt/lampp/lampp start
+
+para dar permisos a la carpeta de htdocs
+sudo chmod -Rf 777 /opt
+
+
+Proyecto salud:
+1. Este sistema contará con un registro de usuarios uno para médicos, otro para usuarios (pacientes) y para voluntarios.
+1.2 contará con un usuario administrador
+
+2. El usuario paciente podrá consultar los médicos disponibles en su zona, además podra agendar una cita con el y una vez terminada la atención este podrá calificar la atención brindada.
+
+2.2 al usuario paciente se le generará un historial médico a partir de todas las citas concluidas y de un formulario inicial (se llena al principio de su perfil), no podrá modificar su historial médico a menos que el usuario médico que lo atendió este lo modifique.
+
+3. El usuario médico tendrá la posibilidad de extender una receta médica y podrá agregar su diagnóstico al historial médico del usuario paciente.
+
+4. El usuario médico podrá establecer el costo por cita desde 0 MXN hasta el precio que el indique
+
+5. El usuario paciente podrá elegir su método de pago ya sea en efectivo o con tarjeta
+
+6. Implementar un foro o grupos de discusión sobre temas de salud, actividades virtuales o presenciales que involucren tanto a adultos mayores como a jóvenes
+
+7. Implementar un gestor de programas de voluntariado donde personas jóvenes puedan ayudar a los adultos mayores en temas tecnológicos o actividades cotidianas.
+
+7.2. diseñar funcionalidades que permitan organizar encuentros comunitarios relacionados con la salud, promoviendo actividades físicas, talleres de bienestar emocional o charlas informativas en parques u otros lugares públicos.
