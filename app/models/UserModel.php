@@ -61,5 +61,68 @@ class UserModel {
 
         return false;
     }
+
+    public function iniciarSesion($email, $contrasena) {
+        $conexion = $this->db->conectar();
+        $query = "SELECT id, nombre, id_rol_usuario FROM usuarios WHERE email = ? AND contrasena = ?";
+        $stmt = $conexion->prepare($query);
+        $stmt->bind_param("ss", $email, $contrasena);
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if ($result->num_rows === 1) {
+            $usuario = $result->fetch_assoc();
+    
+            // Obtener el rol del usuario
+            $rol = $this->obtenerRol($email);
+    
+            // Iniciar sesión (crear variables de sesión)
+            session_start();
+            $_SESSION['usuario_id'] = $usuario['id'];
+            $_SESSION['usuario'] = $usuario['nombre'];
+            $_SESSION['rol'] = $rol; // Utilizar el rol obtenido
+    
+            return true;
+        }
+    
+        return false; // Si las credenciales no son válidas
+    }
+    
+    public function obtenerRol($usuario_id) {
+        $conexion = $this->db->conectar();
+    
+        // Preparar la consulta para obtener el nombre del rol
+        $query = "SELECT r.tipo FROM usuarios u
+                  JOIN rol_usuario r ON u.id_rol_usuario = r.id
+                  WHERE u.id = ?";
+        $stmt = $conexion->prepare($query);
+        $stmt->bind_param("i", $usuario_id);
+        
+        // Ejecutar la consulta
+        $stmt->execute();
+        $stmt->bind_result($tipoRol);
+        $stmt->fetch();
+        
+        // Cerrar la conexión y devolver el nombre del rol
+        $stmt->close();
+        $conexion->close();
+    
+        return $tipoRol;
+    }
+    
+    
+    // Función para verificar si el usuario está autenticado
+    public function estaAutenticado() {
+        return isset($_SESSION['usuario']);
+    }
+
+    // Función para cerrar sesión
+    public function cerrarSesion() {
+        // Destruir todas las variables de sesión
+        session_start();
+        session_destroy();
+    }
+
+
 }
 ?>

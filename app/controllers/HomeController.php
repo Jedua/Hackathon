@@ -39,6 +39,17 @@ class HomeController {
         require_once 'app/controllers/UserController.php';
     }
 
+    public function userLogin() {
+        $page = 'userLogin';
+       // include 'app/views/templete.php';
+        require_once 'app/controllers/LoginController.php';
+    }
+
+    public function perfilAdmin() {
+        $page = 'userLogin';
+       // include 'app/views/templete.php';
+        require_once 'app/views/perfil_admin.php';
+    }
     // Otras funciones del controlador...
 
 }

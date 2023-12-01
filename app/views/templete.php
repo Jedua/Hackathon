@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/nav.css">
     <link rel="stylesheet" href="public/css/form_registro.css">
+    <link rel="stylesheet" href="public/css/login.css">
     <title>Medical</title>
 </head>
 <body>

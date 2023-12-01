@@ -1,0 +1,71 @@
+
+
+.login-form {
+    background-color: #3498db;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 100px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 40px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2980b9;
+    color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1c6ca1;
+}
+
+/* Estilos base del formulario de inicio de sesión */
+
+/* Configuración para pantallas grandes */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Media Queries para ajustar el tamaño en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .login-container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-container {
+        max-width: 95%;
+    }
+}

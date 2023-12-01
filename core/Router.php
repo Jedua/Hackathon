@@ -1,8 +1,10 @@
 <?php
 require_once 'app/controllers/HomeController.php';
 
-class Router {
-    public function route() {
+class Router
+{
+    public function route()
+    {
         $page = isset($_GET['page']) ? $_GET['page'] : 'index';
         $controller = new HomeController();
 
@@ -17,7 +19,13 @@ class Router {
                 $controller->index();
                 break;
             case 'userRegistro':
-                    $controller->userRegistro();
+                $controller->userRegistro();
+                break;
+            case 'userLogin':
+                $controller->userLogin();
+                break;
+                case 'perfil_admin':
+                    $controller->perfilAdmin();
                     break;
             default:
                 $controller->index();
@@ -25,4 +33,3 @@ class Router {
         }
     }
 }
-?>

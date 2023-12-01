@@ -6,6 +6,19 @@ if (isset($_SESSION['mensaje_registro'])) {
 }
 ?>
 
-<h1>
-    Estoy en login
-</h1>
+ <main class="login-container">
+    <div class="login-container">
+            <form action="index.php?page=userLogin" method="POST" class="login-form">
+                <h2>Iniciar Sesión</h2>
+                <div class="input-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+    </div>
+</main>
