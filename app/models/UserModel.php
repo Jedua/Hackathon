@@ -123,6 +123,12 @@ class UserModel {
         session_destroy();
     }
 
-
+    public function obtenerNombreUsuario($idUsuario) {
+        $conexion = $this->db->conectar();// Lógica para obtener el nombre de usuario desde la base de datos
+        // SELECT nombre FROM usuarios WHERE id = $idUsuario
+        // Supongamos que $nombre es el nombre obtenido de la base de datos
+        $nombre = "Nombre de Usuario"; // Ejemplo, reemplaza con la lógica real de la base de datos
+        return $nombre;
+    }
 }
 ?>

@@ -1,0 +1,27 @@
+.act {
+    background-color: 39a2e7;
+    align-items: center;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.contenedorAdmi {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+}
+  
+.ladoizq {
+    flex: 1;
+}
+  
+.imgAdmi {
+    width: 100%;
+    height: auto;
+}
+  
+.ladoder {
+    flex: 2;
+    padding: 20px;
+    background-color: #f4f4f4;
+}

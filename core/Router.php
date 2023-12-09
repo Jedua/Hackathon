@@ -21,12 +21,30 @@ class Router
             case 'userRegistro':
                 $controller->userRegistro();
                 break;
+            case 'logout':
+                $controller->cerrarSesion();
+                break;
             case 'userLogin':
                 $controller->userLogin();
                 break;
-                case 'perfil_admin':
-                    $controller->perfilAdmin();
-                    break;
+            case 'perfil_admin':
+                $controller->perfilAdmin();
+                break;
+            case 'perfil_paciente':
+                $controller->perfilPaciente();
+                break;
+            case 'perfil_medico':
+                $controller->perfilMedico();
+                break;
+            case 'perfil_voluntario':
+                $controller->perfilVoluntario();
+                break;
+            case 'foro':
+                $controller->paginaForo();
+                break;
+            case 'cita':
+                $controller->paginaCitas();
+                break;
             default:
                 $controller->index();
                 break;

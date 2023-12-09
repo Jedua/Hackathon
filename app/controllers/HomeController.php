@@ -33,6 +33,16 @@ class HomeController {
         include 'app/views/templete.php';
     }
 
+    public function cerrarSesion() {
+        session_start();
+        unset($_SESSION['usuario_id']); // Elimina el usuario de la sesión
+        session_destroy(); // Destruye la sesión
+
+        // Redirecciona a la página de inicio o a donde desees después de cerrar sesión
+        header("Location: index.php"); // Cambia la ubicación según tu necesidad
+        exit();
+    }
+
     public function userRegistro() {
         $page = 'userRegistro';
        // include 'app/views/templete.php';
@@ -46,15 +56,38 @@ class HomeController {
     }
 
     public function perfilAdmin() {
-        $page = 'userLogin';
-       // include 'app/views/templete.php';
-        require_once 'app/views/perfil_admin.php';
+        $page = 'administrador_perfil';
+        require_once 'app/views/templete.php';
     }
+
+    public function perfilPaciente() {
+        $page = 'paciente_perfil';
+        require_once 'app/views/templete.php';
+    }
+
+    public function perfilMedico() {
+        $page = 'medico_perfil';
+        require_once 'app/views/templete.php';
+    }
+
+    public function perfilVoluntario() {
+        $page = 'voluntario_perfil';
+        require_once 'app/views/templete.php';
+    }
+
+    public function paginaForo() {
+        $page = 'forum_view';
+        require_once 'app/views/templete.php';
+    }
+
+    public function paginaCitas() {
+        $page = 'paginaCitas';
+        require_once 'app/views/templete.php';
+    }
+    
     // Otras funciones del controlador...
-
+    
+    
 }
-
-
-
 
 ?>

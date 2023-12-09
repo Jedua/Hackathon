@@ -8,15 +8,12 @@
             <input type="text" id="apellidoP" name="apellidoP" required>
             <label for="apellidoM">Apellido Materno:</label>
             <input type="text" id="apellidoM" name="apellidoM" required>
-        </div>
-        <div class="input-group">
             <label for="direccion">Dirección:</label>
             <input type="text" id="direccion" name="direccion">
-        </div>
-        <div class="input-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="text" id="email" name="email" required>
         </div>
+ 
         <div class="input-group">
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="contrasena" name="contrasena" required>

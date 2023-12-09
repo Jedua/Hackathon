@@ -24,9 +24,16 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
 input[type="email"],
-input[type="password"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #131010;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
 input[type="submit"],
 input[type="radio"],
 textarea,

@@ -1,0 +1,283 @@
+.navbar {
+    overflow: hidden;
+    background-color: #39a2e7;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    /*background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-textura-fondo-hormigon-azul-claro_118047-2458.jpg");*/
+    /*background-image: url("https://img.freepik.com/vector-premium/fondo-premium-cuadrados-multicolores-color-pastel_391563-1099.jpg");*/
+    /*background-size: cover;*/
+}
+
+.navbar a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+#colorNegro{
+    color: black;
+    font-family: 'Garamond', serif;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover, .dropbtn {
+    background-color: #39a2e7;
+}
+
+.letramenu {
+    color: #ffffff;
+    font-size: 30px;
+    text-shadow: 
+    -.5px -.5px 0 #8cd1ff,  
+     .5px -.5px 0 #8cd1ff,
+    -.5px  .5px 0 #8cd1ff,
+     .5px  .5px 0 #8cd1ff;
+     text-decoration: underline;
+     text-underline-offset: 13px;
+    text-decoration-thickness: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #a2c3da;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#img1{
+    height: 200px;
+    margin-top: 0px;
+}
+
+#contenedorhome1{
+    float: left;
+    width: 31%;
+    color: #fff;
+    padding: 10px;
+}
+
+#titulo{
+    width: 95%;
+    color: #ffffff;
+    background-color: #39a2e7;
+    /*background-image: url('https://img.freepik.com/vector-premium/fondo-banner-medico-abstracto-diseno-plantillas-concepto-e-idea-tecnologia-sanitaria-medicina-innovacion-salud-ciencia-e-investigacion-encabezado-sitio-web-patron-medico-o-banner-web_181182-15730.jpg') ;*/
+    /*background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-textura-fondo-hormigon-azul-claro_118047-2458.jpg");*/
+    /*background-image: url("https://img.freepik.com/vector-premium/fondo-medico-abstracto-iconos-simbolos-salud-diseno-plantillas-concepto-e-idea-tecnologia-sanitaria-medicina-innovacion-salud-ciencia-e-investigacion_181182-15870.jpg");*/
+    background-size: cover;
+    /*background-repeat: no-repeat;*/ 
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+    /*text-shadow: 
+    -1px -1px 0 #ffffff,  
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff;*/
+}
+
+.letratitulo{
+    font-size: 40px;
+}
+
+.letratitulo2{
+    color: rgb(255, 255, 255);
+    /*text-shadow: 
+    -1px -1px 0 #ffffff,  
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff;*/
+}
+
+#noticias2{
+    color: #ffffff;
+    font-size: 45px;
+    text-shadow: 
+    -1px -1px 0 #ffffff,  
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff;
+}
+
+
+.encabezado-container {
+    text-align: center;
+    position: relative;
+    height: 430px;
+}
+
+.encabezado-imagen {
+    height: 400px;
+    margin-top: 0px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centrado {
+    position: absolute;
+    margin-top: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+}
+
+.izquierda {
+    position: absolute;
+    margin-top: 0px;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+}
+
+.derecha {
+    position: absolute;
+    margin-top: 0px;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+}
+
+.abajo {
+    font-size: 25px;
+    width: 90%;
+    position: absolute;
+    /*border: 1px solid;*/
+    background-color: #ffffff;
+    border-color: #054672b4;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(87, 87, 87);
+    text-shadow: 
+    -1px -1px 0 #ffffff,  
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff;
+}
+
+.mov {
+    border: 0px solid;
+    opacity: 0; /* Inicialmente ocultas */
+    transition: opacity 1s ease-in-out; /* Efecto de transición suave */
+}
+
+.mov:first-child {
+    opacity: 1;
+}
+
+.seccionnoticias {
+    /*background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-textura-fondo-hormigon-azul-claro_118047-2458.jpg");*/
+    overflow: hidden;
+    background-color: #39a2e7;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.seccionnoticias a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.seccionnoticias a:hover {
+    background-color: #39a2e7;
+}
+
+
+.contene {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+  
+select {
+    padding: 10px;
+    margin-top: 10px;
+}
+  
+.profil {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+  
+.filterBtn {
+    margin-right: 10px;
+}
+
+.caja {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    min-height: 100px;
+}
+  
+.caja[contenteditable="true"]:empty:before {
+    content: attr(placeholder);
+    color: #aaa;
+    font-style: italic;
+}
+  
+.caja[contenteditable="true"]:focus:before {
+    content: "";
+}

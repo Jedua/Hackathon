@@ -150,6 +150,25 @@ CREATE TABLE foro_mensajes (
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id) ON DELETE CASCADE
 );
 
+CREATE TABLE publicaciones (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_usuario INT,
+    titulo VARCHAR(100),
+    contenido TEXT,
+    fecha_publicacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+CREATE TABLE comentarios (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_usuario INT,
+    id_publicacion INT,
+    contenido TEXT,
+    fecha_comentario TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_publicacion) REFERENCES publicaciones(id) ON DELETE CASCADE
+);
+
 
 -- Crear disparador para registrar inserciones en historialMedico
 DELIMITER //
@@ -317,3 +336,21 @@ INSERT INTO pacientes (id_usuario, info_inicial) VALUES
 (5, 'Información inicial del paciente 1'), -- Paciente 1
 (6, 'Información inicial del paciente 2'), -- Paciente 2
 (7, 'Información inicial del paciente 3'); -- Paciente 3
+
+
+INSERT INTO `publicaciones` (`id_usuario`, `titulo`, `contenido`, `fecha_publicacion`) VALUES
+(2, 'Avances en Telemedicina', 'Descubre cómo la telemedicina está transformando la atención médica.', '2023-12-10 08:00:00'),
+(3, 'Inteligencia Artificial en Diagnóstico Médico', '¿Cómo la IA está revolucionando el diagnóstico de enfermedades?', '2023-12-11 09:30:00'),
+(4, 'Realidad Virtual en Rehabilitación', 'Explora cómo la realidad virtual se usa en la recuperación de pacientes.', '2023-12-12 11:15:00');
+
+
+INSERT INTO `foro_mensajes` (`id_usuario`, `titulo`, `contenido`, `fecha_publicacion`) VALUES
+(5, 'Experiencia con Teleconsultas', 'Comparte tus experiencias con las consultas médicas online.', '2023-12-10 10:00:00'),
+(6, 'Nuevas Apps de Salud', '¿Alguien ha probado las últimas aplicaciones de salud?', '2023-12-11 12:30:00'),
+(7, 'Consejos para el Uso de Dispositivos Médicos', 'Compartamos consejos para sacar el máximo provecho de los dispositivos de salud.', '2023-12-12 14:00:00');
+
+
+INSERT INTO `eventos` (`nombre_evento`, `fecha`, `ubicacion`, `descripcion`) VALUES
+('Congreso de Tecnología Médica', '2023-12-15', 'Hospital Central', 'Evento que destaca los últimos avances tecnológicos en medicina.'),
+('Seminario de Telemedicina', '2023-12-18', 'Centro de Convenciones', 'Aprende sobre el impacto de la telemedicina en la atención médica.'),
+('Workshop de Innovación en Salud', '2023-12-20', 'Instituto de Investigación Médica', 'Un taller para explorar nuevas tecnologías en el ámbito de la salud.');
